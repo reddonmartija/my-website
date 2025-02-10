@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./styles.css">
+        
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Be My Valentines?</h1>
+                <h1 class = "header_text">Are you free tommorow?</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTQ2emtnM3VybTEwc3YwM2Q0YXlsNHlpdTkxcmxuZ25xZmN5aTU5aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1hqb8LwPS2xCNCpWH8/giphy.gif">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>
